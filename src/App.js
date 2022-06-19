@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Greeting from './Greeting.js'
+import Notifications from './Notifications';
 
 function App() {
+ const notifications = ["You received a package", "The weather is sunny"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Greeting language="es"/>
+      <Greeting language="fr"/>
+      <Greeting />
+      <Notifications notifications={notifications} />;
+    </>
   );
-}
+};
 
 export default App;
